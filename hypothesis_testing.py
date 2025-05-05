@@ -33,7 +33,7 @@ def generate_figure(df, alpha, delta, sigma, show_beta=True, show_power=True):
 
     # Alpha region
     fig.add_trace(go.Scatter(x=x_alpha, y=null_dist.pdf(x_alpha), fill='tozeroy', mode='none',
-                             name='Alpha (Type I)', fillcolor='rgba(255,0,0,0.4)'))
+                             name='α ("Alpha")', fillcolor='rgba(255,0,0,0.4)'))
 
     # Beta region
     if show_beta:
@@ -79,7 +79,7 @@ def generate_figure(df, alpha, delta, sigma, show_beta=True, show_power=True):
 
     fig.update_layout(
         title='',
-        xaxis_title='Test Statistic',
+        xaxis_title='t Score',
         yaxis_title='Probability Density',
         legend=dict(x=0.01, y=0.99, bgcolor='rgba(255,255,255,0.7)', bordercolor='black'),
         template='plotly_white',
